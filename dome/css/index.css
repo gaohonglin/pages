@@ -1,0 +1,300 @@
+@import '_base.css';
+.navSite {
+  width: 100%;
+  height: 40px;
+  font-size: 12px;
+  line-height: 40px;
+  color: #666666;
+  background-color: #f5f5f5;
+}
+.navSite a,
+.navSite em {
+  float: right;
+  margin-left: 14px;
+}
+.navSite a:hover {
+  color: #000;
+}
+.navSite span {
+  float: left;
+  margin-right: 20px;
+}
+/*导航*/
+.nav {
+  width: 100%;
+  height: 90px;
+  overflow: hidden;
+  border-bottom: 1px solid #333333;
+}
+.nav .logo {
+  display: block;
+  width: 289px;
+  height: 90px;
+}
+.nav .logo img {
+  width: 100%;
+  height: 100%;
+}
+.nav .nav_main {
+  margin-left: 53px;
+}
+.nav .nav_main li {
+  float: left;
+}
+.nav .nav_main li a {
+  display: block;
+  margin-left: 50px;
+  font-size: 15px;
+  height: 36px;
+  margin-top: 27px;
+  line-height: 36px;
+  font-weight: bold;
+  color: #333333;
+}
+.nav .nav_main li .active {
+  color: red;
+  border-bottom: 2px solid red;
+}
+.nav form {
+  display: block;
+  font-size: 0;
+  margin-top: 27px;
+  line-height: 36px;
+}
+.nav form input[type="text"] {
+  width: 210px;
+  height: 16px;
+  padding: 9px 10px;
+  font-size: 12px;
+  border: 1px solid #333333;
+}
+.nav form input[type="submit"] {
+  width: 48px;
+  height: 36px;
+  font-size: 12px;
+  background: #333333;
+  color: #ffffff;
+}
+/*流程*/
+.process {
+  width: 100%;
+  height: 168px;
+  background: #f5f5f5;
+}
+.process .processL {
+  width: 107px;
+  height: 168px;
+  background: url("../img/process_logo.jpg") no-repeat left center;
+}
+.process .processR {
+  height: 168px;
+  overflow: hidden;
+}
+.process .processR li {
+  float: left;
+}
+.process .processR li p {
+  width: 107px;
+  height: 48px;
+  padding-top: 120px;
+  text-align: center;
+}
+.process .processR li i {
+  display: block;
+  width: 9px;
+  height: 168px;
+  background: url("../img/icon.png") no-repeat center 67px;
+}
+.process .processR li:nth-of-type(1) p {
+  background: url("../img/icon1.jpg") no-repeat center 36px;
+}
+.process .processR li:nth-of-type(2) p {
+  background: url("../img/icon2.jpg") no-repeat center 36px;
+}
+.process .processR li:nth-of-type(3) p {
+  background: url("../img/icon3.jpg") no-repeat center 36px;
+}
+.process .processR li:nth-of-type(4) p {
+  background: url("../img/icon4.jpg") no-repeat center 36px;
+}
+.process .processR li:nth-of-type(5) p {
+  background: url("../img/icon5.jpg") no-repeat center 36px;
+}
+.process .processR li:nth-of-type(6) p {
+  background: url("../img/icon6.jpg") no-repeat center 36px;
+}
+.process .processR li:nth-of-type(7) p {
+  background: url("../img/icon7.jpg") no-repeat center 36px;
+}
+.process .processR li:nth-of-type(8) p {
+  background: url("../img/icon8.jpg") no-repeat center 36px;
+}
+.process .processR li:nth-of-type(9) p {
+  background: url("../img/icon9.jpg") no-repeat center 36px;
+}
+/*搜索区*/
+.search_box {
+  position: relative;
+  /*搜索条件*/
+}
+.search_box .search {
+  font-size: 0;
+  min-height: 76px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.search_box .search strong {
+  font-size: 16px;
+  color: #333333;
+  margin: 26px 10px 0 0;
+  font-weight: bold;
+}
+.search_box .search span {
+  display: inline-block;
+  border: 1px solid #dddddd;
+  padding: 6px 8px 6px 10px;
+  margin: 26px 10px 0 0;
+  font-size: 12px;
+}
+.search_box .search span b {
+  color: #333333;
+}
+.search_box .search span em {
+  margin-right: 8px;
+}
+.search_box .search span em,
+.search_box .search span i {
+  color: red;
+}
+.search_box .search span i {
+  cursor: pointer;
+}
+.search_box .search_conditions {
+  min-height: 50px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.search_box .search_conditions span {
+  display: inline-block;
+  width: 117px;
+  color: #999999;
+  line-height: 50px;
+}
+.search_box .search_conditions a {
+  display: inline-block;
+  padding: 6px 12px;
+}
+.search_box .search_conditions a:hover {
+  background: red;
+  color: #ffffff;
+}
+.search_box .more {
+  display: none;
+}
+.search_box .offOther {
+  width: 212px;
+  height: 30px;
+  border: 1px solid #e5e5e5;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  margin-left: -106px;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+  background: #fff;
+  border-top: none;
+  cursor: pointer;
+}
+.search_box .offOther i {
+  display: inline-block;
+  width: 9px;
+  height: 10px;
+  background: url("../img/icon.png") no-repeat center right;
+  transform: rotate(90deg);
+}
+/*列表*/
+.list {
+  height: auto;
+  margin-top: 60px;
+  table-layout: fixed;
+}
+.list .list_title {
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  background: #eeeeee;
+}
+.list .list_title tr {
+  height: 44px;
+}
+.list .list_title tr td {
+  text-align: center;
+}
+.list .list_title tr td:nth-of-type(1) {
+  width: 95px;
+}
+.list .list_title tr td:nth-of-type(2) {
+  width: 254px;
+}
+.list .list_title tr td:nth-of-type(3) {
+  width: 203px;
+}
+.list .list_title tr td:nth-of-type(4) {
+  width: 114px;
+}
+.list .list_title tr td:nth-of-type(5) {
+  width: 108px;
+}
+.list .list_title tr td:nth-of-type(6) {
+  width: 86px;
+}
+.list .list_title tr td:nth-of-type(7) {
+  width: 132px;
+}
+.list .list_title tr td:nth-of-type(8) {
+  width: 79px;
+}
+.list .list_title tr td:nth-of-type(8) {
+  width: 130px;
+}
+.list .list_item {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+.list .list_item tr {
+  height: 66px;
+}
+.list .list_item tr td {
+  text-align: center;
+  height: 66px;
+}
+.list .list_item tr td:nth-of-type(1) {
+  width: 95px;
+  background: url("../img/list.jpg") no-repeat center center;
+}
+.list .list_item tr td:nth-of-type(2) {
+  width: 254px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.list .list_item tr td:nth-of-type(3) {
+  width: 203px;
+}
+.list .list_item tr td:nth-of-type(4) {
+  width: 114px;
+}
+.list .list_item tr td:nth-of-type(5) {
+  width: 108px;
+}
+.list .list_item tr td:nth-of-type(6) {
+  width: 86px;
+}
+.list .list_item tr td:nth-of-type(7) {
+  width: 132px;
+}
+.list .list_item tr td:nth-of-type(8) {
+  width: 79px;
+}
+.list .list_item tr td:nth-of-type(8) {
+  width: 130px;
+}
