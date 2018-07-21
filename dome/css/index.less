@@ -1,10 +1,4 @@
 @import './_base.css';
-
-
-
-
-
-
 .navSite{
     width:100%;
     height:40px;
@@ -55,8 +49,8 @@
                 color:#333333;
             }
             .active{
-                color:red;
-                border-bottom:2px solid red;
+                color:#ed1b24;
+                border-bottom:2px solid #ed1b24;
             }
         }
     }
@@ -143,7 +137,7 @@
             font-size:12px;
             b{color:#333333;}
             em{margin-right:8px;}
-            em,i{color:red;}
+            em,i{color:#ed1b24;}
             i{cursor:pointer;}
         }
     }
@@ -216,28 +210,63 @@
             td:nth-of-type(6){width:86px;}
             td:nth-of-type(7){width:132px;}
             td:nth-of-type(8){width:79px;}
-            td:nth-of-type(8){width:130px;}
+            td:nth-of-type(9){width:130px;}
         }
     }
     .list_item{
         width:100%;
         background:#fff;
-        border-bottom: 1px solid #e5e5e5;
         tr{
             height:66px;
+            border-bottom: 1px solid #e5e5e5;
             td{
                 text-align: center;
                 height:66px;
             }
             td:nth-of-type(1){width:95px;background:url("../img/list.jpg") no-repeat center center;}
             td:nth-of-type(2){width:254px;text-overflow:ellipsis;overflow: hidden; white-space:nowrap;}
-            td:nth-of-type(3){width:203px;}
+            td:nth-of-type(3){width:203px;color:#ed1b24;font-weight:bold;}
             td:nth-of-type(4){width:114px;}
             td:nth-of-type(5){width:108px;}
             td:nth-of-type(6){width:86px;}
             td:nth-of-type(7){width:132px;}
+            td:nth-of-type(7).active{color:#2dae76;}
+            td:nth-of-type(7).close{color:#a9a9a9;}
             td:nth-of-type(8){width:79px;}
-            td:nth-of-type(8){width:130px;}
+            td:nth-of-type(9) a{color:#ed1b24;}
+            td:nth-of-type(9) a.active{display:inline-block;padding:5px 15px;background:#fa4f4f;color:#fff;}
         }
     }
+} 
+
+/*分页*/
+.paging{
+    max-width:1200px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    margin:20px auto 0 auto;
+    span,em,a{
+        border:1px solid #666;
+        padding:8px 14px;
+        text-align: center;
+        background:#f6f6f6;
+    }
+    a{
+        border-left:none;
+        background:#fff;
+    }
+    em{
+        margin-left:14px;
+        border:none;
+        background:#fff;
+    } 
+} 
+
+/*页面底部*/
+.footer{
+    width:100%;
+    height:398px;
+    margin-top:46px;
+    background: #333;
 } 
