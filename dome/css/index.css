@@ -51,6 +51,9 @@
   font-weight: bold;
   color: #333333;
 }
+.nav .nav_main li a:hover {
+  color: #ed1b24;
+}
 .nav .nav_main li .active {
   color: #ed1b24;
   border-bottom: 2px solid #ed1b24;
@@ -140,33 +143,44 @@
 .search_box .search {
   font-size: 0;
   min-height: 76px;
+  line-height: 76px;
   border-bottom: 1px solid #e5e5e5;
 }
 .search_box .search strong {
   font-size: 16px;
   color: #333333;
-  margin: 26px 10px 0 0;
+  margin-right: 10px;
   font-weight: bold;
-}
-.search_box .search span {
   display: inline-block;
+  float: left;
+  width: 80px;
+  height: 76px;
+}
+.search_box .search div {
+  float: left;
+}
+.search_box .search div span {
   border: 1px solid #dddddd;
-  padding: 6px 8px 6px 10px;
-  margin: 26px 10px 0 0;
+  padding: 6px;
+  height: 20px;
+  margin-right: 3px;
   font-size: 12px;
 }
-.search_box .search span b {
+.search_box .search div span b {
   color: #333333;
 }
-.search_box .search span em {
+.search_box .search div span em {
   margin-right: 8px;
 }
-.search_box .search span em,
-.search_box .search span i {
+.search_box .search div span em,
+.search_box .search div span i {
   color: #ed1b24;
 }
-.search_box .search span i {
+.search_box .search div span i {
   cursor: pointer;
+}
+.search_box .hide_saerch {
+  display: none;
 }
 .search_box .search_conditions {
   min-height: 50px;
@@ -182,7 +196,8 @@
   display: inline-block;
   padding: 6px 12px;
 }
-.search_box .search_conditions a:hover {
+.search_box .search_conditions a:hover,
+.search_box .search_conditions .active {
   background: red;
   color: #ffffff;
 }
@@ -306,7 +321,8 @@
 .list .list_item tr td:nth-of-type(9) a {
   color: #ed1b24;
 }
-.list .list_item tr td:nth-of-type(9) a.active {
+.list .list_item tr td:nth-of-type(9) a.active,
+.list .list_item tr td:nth-of-type(9) a:hover {
   display: inline-block;
   padding: 5px 15px;
   background: #fa4f4f;
@@ -332,6 +348,9 @@
   border-left: none;
   background: #fff;
 }
+.paging a:hover {
+  background: #eee;
+}
 .paging em {
   margin-left: 14px;
   border: none;
@@ -341,6 +360,78 @@
 .footer {
   width: 100%;
   height: 398px;
-  margin-top: 46px;
+  margin-top: 45px;
   background: #333;
+  color: #bbb;
+}
+.footer .footer_top {
+  width: 100%;
+  height: 205px;
+  padding-top: 27px;
+  border-bottom: 1px solid #444;
+}
+.footer .footer_top .link {
+  width: 211px;
+  height: 205px;
+}
+.footer .footer_top .link h4 {
+  color: #d6d6d6;
+  height: 44px;
+  line-height: 44px;
+  font-size: 18px;
+}
+.footer .footer_top .link a {
+  font-size: 14px;
+  line-height: 18px;
+  color: #bbb;
+}
+.footer .footer_top .link a:hover {
+  text-decoration: underline;
+}
+.footer .footer_top .weixin {
+  width: 114px;
+  height: 193px;
+  padding-top: 12px;
+  margin-left: 144px;
+}
+.footer .footer_top .weixin img {
+  display: inline-block;
+  width: 114px;
+  height: 114px;
+  background: #fff;
+}
+.footer .footer_top .weixin p {
+  line-height: 30px;
+  text-align: center;
+}
+.footer .footer_top .phone {
+  width: 202px;
+  height: 205px;
+  margin-left: 76px;
+}
+.footer .footer_top .phone h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  height: 55px;
+  line-height: 55px;
+}
+.footer .footer_top .phone h2 i {
+  font-size: 30px;
+  margin-right: 5px;
+}
+.footer .footer_top .phone p {
+  line-height: 26px;
+  text-align: center;
+}
+.footer .footer_bottom {
+  padding-top: 14px;
+  text-align: center;
+  line-height: 36px;
+}
+.footer .footer_bottom p,
+.footer .footer_bottom a,
+.footer .footer_bottom span,
+.footer .footer_bottom em {
+  color: #666;
 }

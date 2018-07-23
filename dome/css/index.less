@@ -48,6 +48,9 @@
                 font-weight:bold;
                 color:#333333;
             }
+            a:hover{
+                color:#ed1b24;
+            }
             .active{
                 color:#ed1b24;
                 border-bottom:2px solid #ed1b24;
@@ -122,26 +125,37 @@
     .search{
         font-size:0;
         min-height:76px;
+        line-height:76px;
         border-bottom:1px solid #e5e5e5;
         strong{
             font-size:16px;
             color:#333333;
-            margin:26px 10px 0 0;
+            margin-right:10px;
             font-weight:bold;
-        }
-        span{
             display:inline-block;
-            border:1px solid #dddddd;
-            padding:6px 8px 6px 10px;
-            margin:26px 10px 0 0;
-            font-size:12px;
-            b{color:#333333;}
-            em{margin-right:8px;}
-            em,i{color:#ed1b24;}
-            i{cursor:pointer;}
+            float:left;
+            width:80px;
+            height: 76px;
+        }
+        div{
+            float:left;
+            span{
+                border:1px solid #dddddd;
+                padding:6px;
+                height:20px;
+                margin-right:3px;
+                font-size:12px;
+                b{color:#333333;}
+                em{margin-right:8px;}
+                em,i{color:#ed1b24;}
+                i{cursor:pointer;}
+            }
         }
     }
     /*搜索条件*/ 
+    .hide_saerch{
+        display:none;
+    }
     .search_conditions{
         min-height:50px;
         border-bottom:1px solid #e5e5e5; 
@@ -154,9 +168,8 @@
         a{
             display:inline-block;
             padding:6px 12px;
-            // margin:12px 5px;
         }
-        a:hover{
+        a:hover,.active{
             background:red;
             color:#ffffff;
         };
@@ -234,7 +247,7 @@
             td:nth-of-type(7).close{color:#a9a9a9;}
             td:nth-of-type(8){width:79px;}
             td:nth-of-type(9) a{color:#ed1b24;}
-            td:nth-of-type(9) a.active{display:inline-block;padding:5px 15px;background:#fa4f4f;color:#fff;}
+            td:nth-of-type(9) a.active,td:nth-of-type(9) a:hover{display:inline-block;padding:5px 15px;background:#fa4f4f;color:#fff;}
         }
     }
 } 
@@ -256,6 +269,9 @@
         border-left:none;
         background:#fff;
     }
+    a:hover{
+        background:#eee;
+    }
     em{
         margin-left:14px;
         border:none;
@@ -267,6 +283,75 @@
 .footer{
     width:100%;
     height:398px;
-    margin-top:46px;
-    background: #333;
-} 
+    margin-top:45px;
+    background:#333;
+    color:#bbb;
+    .footer_top{
+        width:100%;
+        height:205px;
+        padding-top:27px;
+        border-bottom: 1px solid #444;
+        .link{
+            width:211px;
+            height:205px;
+            h4{
+                color:#d6d6d6;
+                height:44px;
+                line-height:44px;
+                font-size: 18px;
+            }
+            a{
+                font-size: 14px;
+                line-height:18px;
+                color:#bbb;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+        }
+        .weixin{
+            width:114px;
+            height:193px;
+            padding-top:12px;
+            margin-left:144px;
+            img{
+                display:inline-block;
+                width:114px;
+                height:114px;
+                background:#fff;
+            }
+            p{
+                line-height:30px;
+                text-align:center;
+            }
+        }
+        .phone{
+            width:202px;
+            height:205px;
+            margin-left:76px;
+            h2{
+                font-size: 30px;
+                font-weight:bold;
+                color:#fff;
+                height:55px;
+                line-height:55px;
+                i{
+                    font-size:30px;
+                    margin-right:5px;
+                }
+            }
+            p{
+                line-height:26px;
+                text-align:center;
+            }
+        }
+    }
+    .footer_bottom{
+        padding-top:14px;
+        text-align: center;
+        line-height:36px;
+        p,a,span,em{
+            color:#666;
+        }
+    }
+}

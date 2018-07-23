@@ -108,22 +108,17 @@
     </div>
     <!-- 搜索区 -->
     <div class="w_1200 search_box">
-        <div class="search">
+
+        <div class="search box_clear">
             <strong>当前搜索：</strong>
-            <span>
-                <b>汇票类型：</b>
-                <em>电子银行承若汇票</em>
-                <i>X</i>
-            </span>
-            <span>
-                <b>汇票类型：</b>
-                <em>电子银行承若汇票</em>
-                <i>X</i>
-            </span>
-            <span>
-                <em>电子银行承若汇票</em>
-                <i>X</i>
-            </span>
+           
+            <div id="search_tions">
+                <!-- <span>
+                        <b>汇票类型：</b>
+                        <em>电子银行承若汇票</em>
+                        <i class="iconfont icon-guanbi"></i>
+                    </span> -->
+            </div>
         </div>
         <div class="search_conditions">
             <span>汇票类型：</span>
@@ -164,21 +159,19 @@
             <a href="#">单张出售</a>
             <a href="#">多张打包出售</a>
         </div>
-        <div class="more">
-            <div class="search_conditions">
-                <span>询价方式：</span>
-                <a href="#">不限</a>
-                <a href="#">竞价</a>
-                <a href="#">一口价</a>
-            </div>
-            <div class="search_conditions">
-                <span>询价状态：</span>
-                <a href="#">不限</a>
-                <a href="#">询价中</a>
-                <a href="#">询价关闭</a>
-                <a href="#">交易中</a>
-                <a href="#">交易完成</a>
-            </div>
+        <div class="search_conditions" id="hideOne">
+            <span>询价方式：</span>
+            <a href="#">不限</a>
+            <a href="#">竞价</a>
+            <a href="#">一口价</a>
+        </div>
+        <div class="search_conditions" id="hideTwo">
+            <span>询价状态：</span>
+            <a href="#">不限</a>
+            <a href="#">询价中</a>
+            <a href="#">询价关闭</a>
+            <a href="#">交易中</a>
+            <a href="#">交易完成</a>
         </div>
         <div class="offOther">
             <span>更多选项（询价方式、询价状态）</span>
@@ -315,44 +308,140 @@
 
     <!-- 底部 -->
     <div class="footer">
-        <div class="w_1200"></div>
+        <div class="w_1200">
+            <div class="footer_top">
+                <div class="link fl">
+                    <h4>关于我们</h4>
+                    <p><a href="">企业风采</a></p>
+                    <p><a href="">精彩简介</a></p>
+                    <p><a href="">联系我们</a></p>
+                    <p><a href="">加入我们</a></p>
+                    <p><a href="">网站声明</a></p>
+                </div>
+                <div class="link fl">
+                    <h4>安全保障</h4>
+                    <p><a href="">资金安全</a></p>
+                    <p><a href="">交易安全</a></p>
+                    <p><a href="">系统安全</a></p>
+                </div>
+                <div class="link fl">
+                    <h4>帮助中心</h4>
+                    <p><a href="">账号管理</a></p>
+                    <p><a href="">企业管理</a></p>
+                    <p><a href="">我是买方</a></p>
+                    <p><a href="">我是卖方</a></p>
+                    <p><a href="">新手指引</a></p>
+                </div>
+                <div class="weixin fl">
+                    <img src="" alt="">
+                    <p>关注微信</p>
+                </div>
+                <div class="phone fl">
+                    <h2><i class="iconfont icon-dianhua"></i>96250</h2>
+                    <p>周一至周五9:00-17:30</p>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="footer_about">  
+                    <a href="">关于我们</a>
+                    <em>|</em>
+                    <a href="">联系我们</a>
+                    <em>|</em>
+                    <a href="">网站声明</a>
+                    <em>|</em>
+                    <a href="">加入我们</a>
+                    <em>|</em>
+                    <a href="">网站公告</a>
+                    <em>|</em>
+                    <a href="">媒体报道</a>
+                </div>
+                <div class="footer_record">
+                    <p>Copyright 1996-2017 顶呱呱交易平台有限公司 版权所有 京公网安备:11010502031545号 | 京I</p>
+                </div>
+                <div class="footer_link">
+                    <span>友情链接：</span>
+                    <a href="">顶呱呱官网</a>
+                    <em>|</em>
+                    <a href="">小顶网</a>
+                    <em>|</em>
+                    <a href="">小顶家装</a>
+                    <em>|</em>
+                    <a href="">小顶金融</a>
+                    <em>|</em>
+                    <a href="">会计代理</a>
+                    <em>|</em>
+                    <a href="">工商注册</a>
+                    <em>|</em>
+                    <a href="">商标</a>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script>
         $(function(){
-            // more选项
+           
+
+
+            // 筛选条件
             (function(){
+                var oA = $(".search_conditions a");
+                var Len = $(".search_conditions").length;
+                var options = {};
+                oA.click(function(){
+
+                    $(this).parent().find("a").removeClass("active");
+                    $(this).addClass("active");
+
+                    options[$(this).parent().index()]= [$(this).text(),$(this).parent().find("span").text()];
+
+                    createSpan();
+
+
+
+
+                });
+                
+                // 创建span
+                function createSpan(){
+                    var html =  '';
+                    // 循环对象如果用for in循环出来是没有顺序的,但是这里需要有顺序，所以用for循环
+                    // for(var item in options){}
+                    for(var i = 0; i < Len+1; i++){
+                        if( options[i] ){
+                            html += '<span class="tions" data-index='+ i +'><b>'+ options[i][1] +'</b><em>'+ options[i][0] + '</em><i class="iconfont icon-guanbi"></i></span>';
+                        }
+                    }
+                    $("#search_tions").html(html);
+
+                    // 删除元素
+                    $(".tions i").click(function(){
+                        $(this).parent().remove();
+                        /*删除数据(在这里有个重要的思路，每次都忘记，删除对象中的数据，可以通过找到对象中的key值，删除key值就可以删除对象中的数据了，如何拿到要删除的key值呢？在生成结构的时候，可以通过自定义属性传入key值，然后通过获取属性就可以拿到这个key值了，从而删除对象中的数据)；
+                        console.log($(this).parent().attr("data-index")) 拿到属性值
+                        */
+                        delete options[$(this).parent().attr("data-index")];
+                        $(".search_conditions").eq($(this).parent().attr("data-index")-1).find("a").removeClass("active");
+                    })
+                }
+
+                
+
+
+            })();
+
+
+
+             // more选项
+            (function(){
+                $("#hideOne").addClass("hide_saerch");
+                $("#hideTwo").addClass("hide_saerch");
                 $(".offOther").mouseover(function(){
-                    $(".more").slideDown(1000);
+                    $("#hideOne").slideDown(1000);
+                    $("#hideTwo").slideDown(2000);
                 })
-            })()
+            })();
+            
         })
     </script>
 </body>
